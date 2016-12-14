@@ -15,10 +15,10 @@ std::vector<double> xi(int i)
 std::vector<int> nn(int i)
 {
     std::vector<int> retval(4);
-    retval[0]=(i%qx+1)%qx+(i/qx)*qx;
-    retval[1]=(i%qx+(i/qx+1)*qx)%N;
-    retval[2]=(i%qx-1+qx)%qx+(i/qx)*qx;
-    retval[3]=(i%qx+(i/qx-1)*qx+N)%N;
+    retval[0]=(i+1)%qx+(i/qx)*qx;
+    retval[1]=(i+(i/qx+1)*qx)%N;
+    retval[2]=(i-1+qx)%qx+(i/qx)*qx;
+    retval[3]=(i+(i/qx-1)*qx+N)%N;
     return retval;
 }
 
